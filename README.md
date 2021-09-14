@@ -13,7 +13,8 @@ Milestone 1:
 * Included "Change Log" and "TODO" in README
 
 # TODO
-Milestone 1:
-* End Goal: Create a pokemon style fighting game as website
+End Goal: Create a pokemon style fighting game as website
+
+Milestone 2:
 * Create random pokemon card drawer
 * Have that random card possess stats and an image
