@@ -8,6 +8,7 @@ Here is a link to the repository with the source code: https://github.com/srinat
 # Change Log
 Setup:
 * Included link to website and created header with name
+
 Milestone 1:
 * Included "Change Log" and "TODO" in README
 
