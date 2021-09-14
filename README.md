@@ -1,6 +1,4 @@
-# srinathv31.github.io
-Srinath Venkatesh CISC275
+# Srinath Venkatesh CISC 275 Portfolio
 
-CISC 275 Portfolio
-
-Link to repository: https://github.com/srinathv31/srinathv31.github.io.git
+# Portfolio
+My name is Srinath Venkatesh. Here is a link to the repository: https://github.com/srinathv31/srinathv31.github.io.git
