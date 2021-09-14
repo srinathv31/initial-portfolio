@@ -4,9 +4,13 @@
 
         <script>
             function drawCard(){
-                let deck = ["Jan", "Feb", "March"]
-                let random = Math.floor(Math.random() * deck.length)
-                return deck[random]
+                let deck = ["Jan", "Feb", "March"];
+                let random = Math.floor(Math.random() * deck.length);
+                return deck[random];
+            }
+
+            function getCard(){
+                document.body.appendChild(document.createTextNode(getCard()));
             }
         </script>
     </head>
@@ -24,7 +28,7 @@
         </div>
 
         <div>
-            Card: drawCard
+            <input type="text" id="card-value" value="0" onchange="getCard()"/>
         </div>
 
     </body>
