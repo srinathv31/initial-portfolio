@@ -1,8 +1,14 @@
 <html>
     <head>
-        <title>
-            Srinath Venkatesh Portfolio website CISC 275
-        </title>
+        <title>Srinath Venkatesh Portfolio website CISC 275</title>
+
+        <script>
+            function drawCard(){
+                let deck = ["Jan", "Feb", "March"]
+                let random = Math.floor(Math.random() * deck.length)
+                return deck[random]
+            }
+        </script>
     </head>
     <body>
         <div><h1>
@@ -11,6 +17,14 @@
 
         <div>
             Here is a link to the repository: <a href="https://github.com/srinathv31/srinathv31.github.io.git">repository link</a>
+        </div>
+
+        <div>
+            <button onclick="drawCard()">Draw Card</button>
+        </div>
+
+        <div>
+            Card: drawCard
         </div>
 
     </body>

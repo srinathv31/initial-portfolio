@@ -17,4 +17,4 @@ End Goal: Create a pokemon style fighting game as website
 
 Milestone 2:
 * Create random pokemon card drawer
-* Have that random card possess stats and an image
+* Have that random card display stats and an image of the pokemon in "card format"
