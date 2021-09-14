@@ -6,29 +6,41 @@
             function drawCard(){
                 let deck = ["Jan", "Feb", "March"];
                 let random = Math.floor(Math.random() * deck.length);
-                return deck[random];
-            }
-
-            function getCard(){
-                document.body.appendChild(document.createTextNode(getCard()));
+                let drawn = document.querySelector(".card-value").innerText;
+                document.querySelector(".card-value").innerText = deck[random];
             }
         </script>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
     </head>
     <body>
-        <div><h1>
-            Srinath Venkatesh Portfolio website CISC 275
-        </h1></div>
+        <div><h1><p style="color:navy">
+            Srinath Venkatesh Portfolio CISC 275
+        </p></h1></div>
 
         <div>
-            Here is a link to the repository: <a href="https://github.com/srinathv31/srinathv31.github.io.git">repository link</a>
+            Email: srinathv@udel.edu
+        </div><br>
+
+        <div>
+            My name is Srinath Venkatesh. Here is a link to the portfolio website: <a href="https://srinathv31.github.io">Link to this Website</a><br> 
+            Here is a link to the repository with the source code: <a href="https://github.com/srinathv31/srinathv31.github.io.git">Link to Repository</a><br>
         </div>
 
         <div>
-            <button onclick="drawCard()">Draw Card</button>
+            <br>Link to Change Log and TODO: <a href="status.html">Change Log/TODO</a>
         </div>
 
         <div>
-            <input type="text" id="card-value" value="0" onchange="getCard()"/>
+            <br><button onclick="drawCard()">Draw Card</button>
+        </div>
+
+        <div>
+            Equipped Card: <span class="card-value">No Card In Hand</span>
         </div>
 
     </body>
