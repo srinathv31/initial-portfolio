@@ -12,6 +12,7 @@
                 pokemonSelectedOpp = pokemonList[random1];
                 displayPokemon(pokemonSelected);
                 displayOpponentPokemon(pokemonSelectedOpp);
+                displayPokemonImages(pokemonSelected, pokemonSelectedOpp);
             }
 
             function displayPokemon(pokemon){
@@ -20,8 +21,6 @@
                 document.querySelector(".card-health-hand").innerText = pokemon.health;
                 document.querySelector(".card-damage-hand").innerText = pokemon.damage;
                 document.querySelector(".card-stamina-hand").innerText = pokemon.stamina;
-                const img = document.querySelector("img");
-                img.src = `PokemonImages/${pokemon.name}.png`;
             }
 
             function displayOpponentPokemon(pokemon){
@@ -30,8 +29,12 @@
                 document.querySelector(".card-health-opp").innerText = pokemon.health;
                 document.querySelector(".card-damage-opp").innerText = pokemon.damage;
                 document.querySelector(".card-stamina-opp").innerText = pokemon.stamina;
-                const img1 = document.querySelector("img1");
-                img1.src = `PokemonImages/${pokemon.name}.png`;
+            }
+
+            function displayPokemonImages(pokemonSelected, pokemonSelectedOpp){
+                const img = document.querySelectorAll("img");
+                img[0].src = `PokemonImages/${pokemonSelected.name}.png`
+                img[1].src = `PokemonImages/${pokemonSelectedOpp.name}.png`
             }
         </script>
 
@@ -70,7 +73,7 @@
             Health: <span class="card-health-hand">null</span><br>
             Damage: <span class="card-damage-hand">null</span><br>
             Stamina: <span class="card-stamina-hand">null</span><br>
-            <img src="img" width="250" height="250" alt="No Card Drawn">
+            <img src="img[0]" width="250" height="250" alt="No Card Drawn">
         </div>
 
         <div>
@@ -80,7 +83,7 @@
             Health: <span class="card-health-opp">null</span><br>
             Damage: <span class="card-damage-opp">null</span><br>
             Stamina: <span class="card-stamina-opp">null</span><br>
-            <img src="img1" width="250" height="250" alt="No Card Drawn">
+            <img src="img[1]" width="250" height="250" alt="No Card Drawn">
         </div>
 
     </body>
