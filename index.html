@@ -1,13 +1,37 @@
 <html>
     <head>
-        <title>Srinath Venkatesh Portfolio website CISC 275</title>
-
+        <title>Srinath Venkatesh Portfolio Website CISC 275</title>
+        
+        <!-- Importing pokemon.js for pokemon class and instances of pokemon -->
+        <script src = "pokemon.js"></script>
         <script>
             function drawCard(){
-                let deck = ["Jan", "Feb", "March"];
-                let random = Math.floor(Math.random() * deck.length);
-                let drawn = document.querySelector(".card-value").innerText;
-                document.querySelector(".card-value").innerText = deck[random];
+                let random = Math.floor(Math.random() * pokemonList.length);
+                let random1 = Math.floor(Math.random() * pokemonList.length);
+                pokemonSelected = pokemonList[random];
+                pokemonSelectedOpp = pokemonList[random1];
+                displayPokemon(pokemonSelected);
+                displayOpponentPokemon(pokemonSelectedOpp);
+            }
+
+            function displayPokemon(pokemon){
+                document.querySelector(".card-name-hand").innerText = pokemon.name;
+                document.querySelector(".card-type-hand").innerText = pokemon.type;
+                document.querySelector(".card-health-hand").innerText = pokemon.health;
+                document.querySelector(".card-damage-hand").innerText = pokemon.damage;
+                document.querySelector(".card-stamina-hand").innerText = pokemon.stamina;
+                const img = document.querySelector("img");
+                img.src = `PokemonImages/${pokemon.name}.png`;
+            }
+
+            function displayOpponentPokemon(pokemon){
+                document.querySelector(".card-name-opp").innerText = pokemon.name;
+                document.querySelector(".card-type-opp").innerText = pokemon.type;
+                document.querySelector(".card-health-opp").innerText = pokemon.health;
+                document.querySelector(".card-damage-opp").innerText = pokemon.damage;
+                document.querySelector(".card-stamina-opp").innerText = pokemon.stamina;
+                const img1 = document.querySelector("img1");
+                img1.src = `PokemonImages/${pokemon.name}.png`;
             }
         </script>
 
@@ -40,7 +64,23 @@
         </div>
 
         <div>
-            Equipped Card: <span class="card-value">No Card In Hand</span>
+            Your Hand:<br><br>
+            Equipped Card: <span class="card-name-hand">No Card In Hand</span><br>
+            Type: <span class="card-type-hand">null</span><br>
+            Health: <span class="card-health-hand">null</span><br>
+            Damage: <span class="card-damage-hand">null</span><br>
+            Stamina: <span class="card-stamina-hand">null</span><br>
+            <img src="img" width="250" height="250" alt="No Card Drawn">
+        </div>
+
+        <div>
+            Opponent Hand:<br><br>
+            Equipped Card: <span class="card-name-opp">No Card In Hand</span><br>
+            Type: <span class="card-type-opp">null</span><br>
+            Health: <span class="card-health-opp">null</span><br>
+            Damage: <span class="card-damage-opp">null</span><br>
+            Stamina: <span class="card-stamina-opp">null</span><br>
+            <img src="img1" width="250" height="250" alt="No Card Drawn">
         </div>
 
     </body>
