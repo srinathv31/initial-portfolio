@@ -11,6 +11,6 @@ class Pokemon{
 }
 
 // Creating a list of pokemon instances to randomly select one
-const pokemonList = [new Pokemon("Charizard", 100, 50, 10, "fire"), 
-                    new Pokemon("Bulbasaur", 120, 30, 15, "earth"),
-                    new Pokemon("Squirtle", 80, 70, 7, "water")];
+const pokemonList = [new Pokemon("Charizard", 100, 50, 10, "Type: fire"), 
+                    new Pokemon("Bulbasaur", 120, 30, 15, "Type: earth"),
+                    new Pokemon("Squirtle", 80, 70, 7, "Type: water")];

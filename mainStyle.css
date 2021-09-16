@@ -1,0 +1,29 @@
+.container {
+    height: 90vh;
+    /* width: 90vw; */
+    margin: 2rem auto;
+    display: grid;
+    grid-template-areas: "header header"
+                         "left right";
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cell-1 {
+    grid-area: header;
+    background: aqua;
+}
+.cell-2 {
+    grid-area: left;
+    background: green;
+}
+.cell-3 {
+    grid-area: right;
+    background: orangered;
+}
+.cell {
+    /* color: white; */
+    /* font-size: 2.5rem; */
+    text-align: center;
+    padding: 4rem;
+}

@@ -1,5 +1,5 @@
 .container {
-    /* height: 90vh; */
+    height: 90vh;
     /* width: 90vw; */
     margin: 2rem auto;
     display: grid;
@@ -17,6 +17,21 @@
     background: orangered;
     grid-area: left;
  }
+ .cell-2 .card-name-hand{
+    float: left;
+ }
+ .cell-2 .card-type-hand{
+    float: right;
+ }
+ .cell-2 .card-health-hand{
+     float: left;
+ }
+ .cell-2 .card-damage-hand{
+    float: left;
+} 
+.cell-2 .card-stamina-hand{
+    float: left;
+}
  .cell-3 {
     background: limegreen;
     grid-area: main;
@@ -25,13 +40,28 @@
     background: gold;
     grid-area: right;
  }
+ .cell-4 .card-name-opp{
+    float: left;
+ }
+ .cell-4 .card-type-opp{
+    float: right;
+ }
+ .cell-4 .card-health-opp{
+     float: left;
+ }
+ .cell-4 .card-damage-opp{
+    float: left;
+} 
+.cell-4 .card-stamina-opp{
+    float: left;
+}
  .cell-5 {
     background: blueviolet;
     grid-area: footer;
  }
  .cell {
     color: white;
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     text-align: center;
     padding: 4rem;
- }
+}

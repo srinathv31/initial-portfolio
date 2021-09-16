@@ -2,16 +2,92 @@
 <head>
     <title>Game scene</title>
     <link rel="stylesheet" href="gameSceneSetup.css">
+    <!-- Importing pokemon.js for pokemon class and instances of pokemon -->
+    <script src = "pokemon.js"></script>
+    <script>
+        function drawCard(){
+                let random = Math.floor(Math.random() * pokemonList.length);
+                let random1 = Math.floor(Math.random() * pokemonList.length);
+                pokemonSelected = pokemonList[random];
+                pokemonSelectedOpp = pokemonList[random1];
+                displayPokemon(pokemonSelected);
+                displayOpponentPokemon(pokemonSelectedOpp);
+                displayPokemonImages(pokemonSelected, pokemonSelectedOpp);
+                createStatPercentages(pokemonSelected);
+                createStatPercentages(pokemonSelectedOpp);
+            }
+
+            function displayPokemon(pokemon){
+                document.querySelector(".card-name-hand").innerText = pokemon.name;
+                document.querySelector(".card-type-hand").innerText = pokemon.type;
+                document.querySelector(".card-health-hand").innerText = pokemon.health;
+                document.querySelector(".card-damage-hand").innerText = pokemon.damage;
+                document.querySelector(".card-stamina-hand").innerText = pokemon.stamina;
+            }
+
+            function displayOpponentPokemon(pokemon){
+                document.querySelector(".card-name-opp").innerText = pokemon.name;
+                document.querySelector(".card-type-opp").innerText = pokemon.type;
+                document.querySelector(".card-health-opp").innerText = pokemon.health;
+                document.querySelector(".card-damage-opp").innerText = pokemon.damage;
+                document.querySelector(".card-stamina-opp").innerText = pokemon.stamina;
+            }
+
+            function displayPokemonImages(pokemonSelected, pokemonSelectedOpp){
+                const img = document.querySelectorAll("img");
+                img[0].src = `PokemonImages/logo.png`
+                img[1].src = `PokemonImages/${pokemonSelected.name}.png`
+                img[2].src = `PokemonImages/${pokemonSelectedOpp.name}.png`
+            }
+
+            function createStatPercentages(pokemon){
+                document.querySelector(".hand-health-percent").innerText = pokemon.health/300;
+                document.querySelector(".hand-damage-percent").innerText = pokemon.damage/200;
+                document.querySelector(".hand-stamina-percent").innerText = pokemon.stamina/50;
+            }
+
+            function updateStatusBar(){
+
+            }
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header class="cell cell-1">
-            <img src="/srinathv31.github.io/PokemonImages/logo.png" alt="logo">
+            <img src="img[0]" width="500" alt="logo">
         </header>
-        <aside class="cell cell-2">Left sidebar</aside>
-        <main class="cell cell-3">Main content</main>
-        <aside class="cell cell-4">Right sidebar</aside>
-        <footer class="cell cell-5">Footer</footer>
+        <aside class="cell cell-2">Player Hand
+            <div>
+                <br><button onclick="drawCard()">Draw Card</button>
+            </div>
+            <div>
+                Your Hand:<br><br>
+                <span class="card-name-hand">No Card In Hand</span>
+                <span class="card-type-hand">null</span><br>
+                <img src="img[1]" width="250" height="250" alt="No Card Drawn">
+                Health <span class="card-health-hand">null</span><br>
+                Damage <span class="card-damage-hand">null</span><br>
+                Stamina <span class="card-stamina-hand">null</span><br>
+            </div>
+        </aside>
+        <main class="cell cell-3">Battle Stage</main>
+        <aside class="cell cell-4">Opponent Hand
+            <div>
+                Your Hand:<br><br>
+                <span class="card-name-opp">No Card In Hand</span>
+                <span class="card-type-opp">null</span><br>
+                <img src="img[2]" width="250" height="250" alt="No Card Drawn">
+                Health <span class="card-health-opp">null</span><br>
+                Damage <span class="card-damage-opp">null</span><br>
+                Stamina <span class="card-stamina-opp">null</span><br>
+            </div>
+        </aside>
+        <footer class="cell cell-5">Fight Updates</footer>
       </div>
 </body>
 </html>
