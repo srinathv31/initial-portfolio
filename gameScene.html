@@ -39,15 +39,8 @@
                 img[1].src = `PokemonImages/${pokemonSelected.name}.png`
                 img[2].src = `PokemonImages/${pokemonSelectedOpp.name}.png`
             }
-
-            function createStatPercentages(pokemon){
-                document.querySelector(".hand-health-percent").innerText = pokemon.health/300;
-                document.querySelector(".hand-damage-percent").innerText = pokemon.damage/200;
-                document.querySelector(".hand-stamina-percent").innerText = pokemon.stamina/50;
-            }
-
             function updateStatusBar(){
-
+                // Function to create status bars for health, damage, and stamina
             }
     </script>
     <style>
