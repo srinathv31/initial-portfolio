@@ -32,6 +32,9 @@
 .cell-2 .card-stamina-hand{
     float: left;
 }
+.cell-2 img{
+   padding: 5%;
+}
  .cell-3 {
     background: limegreen;
     grid-area: main;
@@ -55,13 +58,16 @@
 .cell-4 .card-stamina-opp{
     float: left;
 }
+.cell-4 img{
+   padding: 5%;
+}
  .cell-5 {
     background: blueviolet;
     grid-area: footer;
  }
  .cell {
-    color: white;
-    /* font-size: 2.5rem; */
-    text-align: center;
-    padding: 4rem;
+   color: white;
+   font-size: small;
+   text-align: center;
+   padding: 3rem;
 }
