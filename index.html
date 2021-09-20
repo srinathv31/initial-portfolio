@@ -1,47 +1,47 @@
 <html>
     <head>
-        <title>Srinath Venkatesh Portfolio Website CISC 275</title>
-        <link rel="stylesheet" href="mainStyle.css">
-        <link rel="stylesheet" href="https://use.typekit.net/rqb4qfr.css">
-        <style>
-            body {
-                font-family: lato, sans-serif;
-                font-weight: 300;
-                background-color: #282c34;
-                color: white;
+        <title>Srinath Venkatesh Portfolio</title>
+        <link rel="stylesheet" href="index.css">
+        <script>
+            function toggle(){
+                var sec = document.getElementById('sec');
+                var nav = document.getElementById('navigation');
+                sec.classList.toggle('active')
+                nav.classList.toggle('active')
+                lst.classList.toggle('active')
             }
-            a:link {
-                color: #61dafb;
-            }
-            a:visited {
-                color: #61dafb;
-            }
-            a:hover {
-                color: cadetblue;
-            }
-        </style>
+        </script>
     </head>
     <body>
-        <div class="container">
-            <header class="cell cell-1">
-                <div><h1>Srinath Venkatesh Portfolio CISC 275</h1></div><br>
-                <img src="/PokemonImages/logo.png" width="500" alt="Logo">
-                <div>Email: srinathv@udel.edu</div><br>
-                <div>
-                    My name is Srinath Venkatesh. Here is a link to the portfolio website: <a href="https://srinathv31.github.io">Link to this Website</a><br> 
-                    Here is a link to the repository with the source code: <a href="https://github.com/srinathv31/srinathv31.github.io.git">Link to Repository</a><br>
-                </div>
+        <section class="banner" id="sec">
+            <header>
+                <a href="index.html" class="logo">CISC 275 Portfolio</a>
+                <div id="toggle" onclick="toggle()"></div>
             </header>
-            <aside class="cell cell-2">
-                <div>
-                    Link to Game Page: <a href="gameScene.html">Click here to Play Game</a>
-                </div>
-            </aside>
-            <aside class="cell cell-3">
-                <div>
-                    Link to Change Log and TODO: <a href="status.html">Change Log/TODO</a>
-                </div>
-            </aside>
+            <div class="content">
+                <h2 class="name-heading">Hi,<br>My name is <span class="name">Srinath Venkatesh</span></h2>
+                <br><p class="intro">Welcome to my Portfolio. Below I have a turn-based pokemon style game and a
+                    Change Log/TODO which tracks all my progress. I primarily used CSS, HTML, 
+                    and some Javascript to create this website. I used React to help create
+                    the game. You can check out my source code "here" or by navigating through
+                    the menu.
+                </p>
+            </div>
+        </section>
+        <div class="table" id="lst">
+            <ul class="boxes">
+                <li><a href="gameScene.html">Game</a></li>
+                <li><a href="status.html">Change Log/TODO</a></li>
+                <li><a href="https://github.com/srinathv31/srinathv31.github.io.git" target="_blank">Source Code</a></li>
+            </ul>
+        </div>
+        <div id="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gameScene.html">Play Game</a></li>
+                <li><a href="status.html">Change Log/TODO</a></li>
+                <li><a href="https://github.com/srinathv31/srinathv31.github.io.git" target="_blank">Source Code</a></li>
+            </ul>
         </div>
     </body>
 </html>

@@ -1,88 +1,83 @@
 <html>
     <head>
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            body, html {
-                margin-left:5%;
-                margin-right:5%;
-                margin-bottom:1%;
-                margin-top:1%;
-            }
-        </style>
+        <link rel="stylesheet" href="status.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     </head>
+    <body>
+        <div>
+            <h1>Change Log</h1><hr>
+        </div>
+        <div class="list">
+            <div>
+                <p><div class="underline">Week of 9/14</div></p>
+                <ul>
+                    <li>Created first page of website that includes header, email, and button to get to this page. This was using
+                        simple HTML.
+                    </li>
+                    <li>Implemented a "Draw Card" button which selects a random element from a given array.
+                        This is to emulate the random draw of a card and was practice for me to learn how to select random
+                        items in HTML/JS.
+                    </li>
+                    <li>Created subpage to get to Change log and TODO. This helped me learn how to create different pages in
+                        an html website by using links.
+                    </li>
+                    <li>Created pokemon class to display the different attributes. Had to see how classes are used in JS.</li>
+                    <li>Implemented pokemon images to display the pokemon with stats. Learned that I had to use
+                        querySelectorAll for multiple images in JS or else only one image will show up.
+                    </li>
+                    <li>Implemented a feature where your opponent also draws a card to imitate two people playing. Now the draw card
+                        button randomly selects two pokemon. Had to keep track of two sets of variables instead of just one in JS.
+                    </li>
+                    <li>Formatted Home page in grid form using a CSS stylesheet. Had to learn how to create a CSS stylesheet.</li>
+                    <li>Created a seperate page for the game and built the game scene using another CSS stylesheet.</li>
+                    <li>In the game scene, formatted the pokemon so the stats and names show up in a card-like manner. Used CSS
+                        attributes to orient the different elements. I had to learn how to use "class=" ids to orient each element
+                        in HTML.
+                    </li>
+                </ul><br>
+            </div>
+        </div>
+        
+        <div>
+            <h1>TODO</h1><hr>
+        </div>
 
-    <div>
-        <h1>Change Log</h1><hr>
-    </div>
+        <div><b><p>End Goal:</b> Create a Pokemon style turn based game</p></div>
 
-    <div>
-        Week of 9/14: <br>
-        <ul>
-            <li>Created first page of website that includes header, email, and button to get to this page. This was using
-                simple HTML.
-            </li>
-            <li>Implemented a "Draw Card" button which selects a random element from a given array.
-                This is to emulate the random draw of a card and was practice for me to learn how to select random
-                items in HTML/JS.
-            </li>
-            <li>Created subpage to get to Change log and TODO. This helped me learn how to create different pages in
-                an html website by using links.
-            </li>
-            <li>Created pokemon class to display the different attributes. Had to see how classes are used in JS.</li>
-            <li>Implemented pokemon images to display the pokemon with stats. Learned that I had to use
-                querySelectorAll for multiple images in JS or else only one image will show up.
-            </li>
-            <li>Implemented a feature where your opponent also draws a card to imitate two people playing. Now the draw card
-                button randomly selects two pokemon. Had to keep track of two sets of variables instead of just one in JS.
-            </li>
-            <li>Formatted Home page in grid form using a CSS stylesheet. Had to learn how to create a CSS stylesheet.</li>
-            <li>Created a seperate page for the game and built the game scene using another CSS stylesheet.</li>
-            <li>In the game scene, formatted the pokemon so the stats and names show up in a card-like manner. Used CSS
-                attributes to orient the different elements. I had to learn how to use "class=" ids to orient each element
-                in HTML.
-            </li>
-        </ul><br>
-    </div>
-
-    <div>
-        <h1>TODO</h1><hr>
-    </div>
-
-    <div><b>End Goal:</b> Create a Pokemon style turn based game</div><br>
-
-    <div>
-        Week of 9/14: <br>
-        <ul>
-            <li><strike>Create a random pokemon card drawer which just equips the card.</strike></li>
-            <li><strike>Display the given card with images rather than just text.</strike></li>
-            <li><strike>Have pokemon cards posess stats like health, damage, stamina, etc.</strike></li>
-            <li><strike>Format the home page so it is simple with two links. One to Change log and one to the game.</strike></li>
-            <li><strike>Create a seperate page for the game to create a game scene.</strike></li>
-            <li><strike>Format the pokemons to be in a card-like form</strike> with health bars.</li>
-        </ul>
-    </div>
-    <div>
-        Week of 9/20: <br>
-        <ul>
-            <li>Include status bars which correspond to each stat like health,etc. under the pokemon.</li>
-            <li>Start creating the game logic (turn-based) along with text updates at the footer of 
-                the in-game events. Ex: "Charizard used attack." Might have to implement React for the
-                game logic.
-            <ol>
-                Note: I feel like there is a lot that will go into this objective. I will update this list
-                as I figure out what exactly this entails.
-            </ol></li">
-            <li>Implement dynamic health bar in the Battle Stage. So you can see in real time how
-                low your pokemon's health is.
-            </li>
-        </ul>
-    </div>
-    <div>
-        Week of 9/27: <br>
-        <ul>
-            <li>Make the game scene look nicer.</li>
-        </ul>
-    </div>
+        <div class="list">
+            <div>
+                <p><div class="underline">Week of 9/14</div></p>
+                <ul>
+                    <li><span class="strike-done">Create a random pokemon card drawer which just equips the card.</span></li>
+                    <li><span class="strike-done">Display the given card with images rather than just text.</span></li>
+                    <li><span class="strike-done">Have pokemon cards posess stats like health, damage, stamina, etc.</span></li>
+                    <li><span class="strike-done">Format the home page so it is simple with two links. One to Change log and one to the game.</span></li>
+                    <li><span class="strike-done">Create a seperate page for the game to create a game scene.</span></li>
+                    <li><span class="strike-done">Format the pokemons to be in a card-like form</span> with health bars.</li>
+                </ul>
+            </div>
+            <div>
+                <p><div class="underline">Week of 9/20</div></p>
+                <ul>
+                    <li><span class="strike-todo">Include status bars which correspond to each stat like health,etc. under the pokemon.</span></li>
+                    <li><span class="strike-todo">Start creating the game logic (turn-based) along with text updates at the footer of 
+                        the in-game events. Ex: "Charizard used attack." Might have to implement React for the
+                        game logic.</span>
+                    <ol>
+                        <span class="strike-todo">Note: I feel like there is a lot that will go into this objective. I will update this list
+                        as I figure out what exactly this entails.</span>
+                    </ol></li">
+                    <li><span class="strike-todo">Implement dynamic health bar in the Battle Stage. So you can see in real time how
+                        low your pokemon's health is.</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p><div class="underline">Week of 9/27</div></p>
+                <ul>
+                    <li><span class="strike-todo">Make the game scene look nicer.</span></li>
+                </ul>
+            </div>
+        </div>
+    </body>
 </html>
