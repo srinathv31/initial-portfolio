@@ -11,15 +11,15 @@
 
 .cell-1 {
     grid-area: header;
-    background: aqua;
+    /* background: aqua; */
 }
 .cell-2 {
     grid-area: left;
-    background: green;
+    /* background: green; */
 }
 .cell-3 {
     grid-area: right;
-    background: orangered;
+    /* background: orangered; */
 }
 .cell {
     /* color: white; */
