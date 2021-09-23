@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../status.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    </head>
+    <body class="change-logs">
+        <div class="list">
+            <div>
+                <div class="underline-change-logs"><h1 class="h1-change-logs">Week of 9/23</h1></div>
+                <div><p>General Note</p></div>
+                <ul>
+                    <li>At first I started writing some logic for this game in JS but I quickly realized that I should be 
+                        using React to both fulfill the portfolio rubric and to make development easier on me. However, learning
+                        React proved to be a bigger hurdle than I thought it would be so I shifted this week's goal to be mostly
+                        frontend aesthetic changes to make the website look more modern and less like something out of 2005.
+                    </li>
+                </ul><br>
+                <div><p>Home Page (CSS)</p></div>
+                <ul>
+                    <li>In general, I wanted the entire website to have a consistent theme that looked modern and sleek. I wanted the
+                        homepage to only have an intro of my portfolio and links to the game, change-log/TODO, and Source Code pages.
+                    </li>
+                    <li>The first step I took to have a uniform website theme was creating a CSS stylesheet (index.css) that I will link to every page.
+                        This will have my fonts, colors, and classes of how I want each element to look like on my website.
+                    </li>
+                    <li>I wanted a flat font that was easy to read so I learned how to import Google fonts into a CSS file and used the
+                        Lato font for the entire website.
+                    </li>
+                    <li>I then learned how to create CSS classes to specify how I want each element to look like in my website. For example,
+                        specifying how I want all of my headers to look.
+                    </li>
+                    <li>I wanted the homepage to only have links to the content for my website so I created both links on the homepage itself and
+                        a side-menu that includes all of the other pages as well.
+                    </li>
+                    <li>To create the side-menu that I wanted in my head, I had to learn some CSS animations. For the hamburger icon, I 
+                        learned that you can use "transform: " in CSS to rotate elements. I simply created two lines and rotated them in an 
+                        X shape when it was active. I then learned about "transition: " which creates this smooth transformation given how
+                        much time you want the transformation to take. I combined these two elements to create the hamburger icon animation which
+                        turns into an X once active.
+                    </li>
+                    <li>I figured out that I could have different parts of my website outside of the view of the page. So I essentially have
+                        the side-menu at -400px off the screen to the right and when the menu-icon is clicked, the side-menu then slides over 400px
+                        to show up on the screen. I also had to set all of the other elements to move to the left 400px to have everything in uniform.
+                        Pairing this with the "transition" property, I was able to create a smooth sliding animation for when the menu appears.
+                    </li>
+                    <li>All of the links still looked static, so I learned how to change the link colors when the mouse hovers over them by 
+                        defining a class using "::hover". This allows me to change the color, add animation, etc. everytime the mouse hovers
+                        over a link.
+                    </li>
+                    <li>The biggest challenge for the redesign wasn't the programming but it was finding aesthetic and readable colors to make the 
+                        website look good. For example, I knew I wanted a dark theme for my website but I couldn't use straight white because it 
+                        strained the eyes when reading text. So I had to use an off-white color. Just finding the colors that matched with each
+                        other took some experimenting and research.
+                    </li>
+                </ul><br>
+                <div><p>Change Log/TODO Page (CSS)</p></div>
+                <ul>
+                    <li>At first, I was just going to have the Change Log page be static text with the colors of the website theme... Until I found
+                        out about CSS animation libraries.
+                    </li>
+                    <li>I may have overused some animations but I thought I'd spice up the boring Change Log/TODO page.
+                    </li>
+                    <li>I was doing some googling and found this website <a class="underline" href="https://animate.style" target="_blank">https://animate.style</a> 
+                        which had a lot of CSS animations already coded for.
+                    </li>
+                    <li>I wanted to include the animations from this website to the headers of my change log page to create this "loading"
+                        animation just so that it's not static and for me to learn how to do this.
+                    </li>
+                    <li>At first I included the animations into my css stylesheet as their documenation said I should but nothing was working.
+                        I fell into a rabbit hole of trying to debug this for almost two hours. I gave up for a second, but as a last ditch 
+                        effort, I changed where I linked the library from my CSS file to the HTML file and it worked somehow! I don't know 
+                        why, but I had to link the library in each HTML file that I wanted to use these animations in.
+                    </li>
+                    <li>I then learned a cross-out effect on my TODO list because I wanted it to behave like an interactive notebook almost.
+                        To achieve this animation I had to create a rectangle around the text but made the size to be 1px and set the magins so that
+                        the bottom of the rectangle was placed in the middle of the text to create a line. "There might be an easier way to do this 
+                        like a library, but I just decided to try to create it on my own."
+                    </li>
+                    <li>I also had to use Keyframes in this strike-through animation to adjust the speed so it wasn't going too fast to where you can't
+                        even see the animation. I am familiar with Keyframes in Adobe and other video-editing software so this didn't take me too long to
+                        understand.
+                    </li>
+                    <li>I wanted the finished items in the TODO list to be crossed out and reveal text when I hovered over it. So I included an
+                        animation property on the strike-through line using the cubic-bezier property to have this smooth looking animation of 
+                        the line revealing the entire line of text. I used this website <a class="underline" href="https://cubic-bezier.com/#.55,0,.1,.1" target="_blank">https://cubic-bezier.com</a>
+                        to experiment with the parameters to see which speed and movement I liked for the animation.
+                    </li>
+                    <li>I also added some hover properties to the TODO list: 
+                        <div class="strike-done">green = finished</div>, <div class="strike-todo">red = still TODO.</div>
+                        [To the left, hover over these to see the effect]
+                    </li>
+                    <li>The Change Log got a bit too big, so I created a list of links that had the change log for each week on its own page.
+                        Here I had to learn to use the "text-decoration" property to get rid of the bullet point to the left.
+                    </li>
+                </ul><br>
+                <div><p>Pokemon Game (CSS, Bootstrap, and React)</p></div>
+                <ul>
+                    <li>I was able to setup the React project, however it is taking me some time to learn how to use React with things like
+                        components so I wasn't able to hit my game logic goals for this week.
+                    </li>
+                    <li>So I pivoted to making the game look nicer. I used bootstrap to organize the game page into different sections:
+                        Header, Player Hand, Battle Stage, CPU Hand, and Footer.
+                    </li>
+                </ul><br>
+                <div><p>Git (branches, new repo)</p></div>
+                <ul>
+                    <li>I thought that we had to use branches for different aspects of our website so I created a new branch that had
+                        my React game code in it. However, Josh told me that I should have a seperate repository just for the game and
+                        link that webpage from the portfolio which is what I'm doing now.
+                    </li>
+                    <li>However, despite branches not really helping me, I learned how to create, destroy, and merge branches. I even used features
+                        like checkout and cherry-pick to only merge certain files from a commit between branches.
+                    </li>
+                </ul><br>
+            </div>
+        </div>
+    </body>
+</html>
