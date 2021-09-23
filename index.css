@@ -116,6 +116,7 @@ header #toggle::after{
 }
 .name {
     color: #5ec9e7;
+    text-decoration: none;
 }
 .name-heading {
     color: antiquewhite;
