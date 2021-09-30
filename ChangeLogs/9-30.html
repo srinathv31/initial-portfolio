@@ -32,6 +32,11 @@
                         the CPU.
                     </li>
                     <li>I created a PokemonView.tsx component to display the selected Pokemon for each player on the screen.</li>
+                    <li>I was running into an issue where the React app didn't properly display the Pokemon images because it could not follow the path. I couldn't find an efficient
+                        fix to this but as a temporary solution: I imported the three Pokemon images into the PokemonView.tsx and called a function using switch cases to select the 
+                        correct path for the given Pokemon.
+                    </li>
+                    <li>I created a background for the main battle stage to create a Pokemon game feel using CSS.</li>
                 </ul><br>
                 <div><p>Game (React using setState Components)</p></div>
                 <ul>
@@ -72,6 +77,19 @@
                         to display it at the bottom of the screen.
                     </li>
                 </ul><br>
+                <div><p>Game (React: typescript and Game logic)</p></div>
+                <ul>
+                    <li>In order to make the game feel like you were playing against someone else, I wrote some logic so the CPU also has a chance to counter-attack as if it
+                        were a player too.
+                    </li>
+                    <li>I implemented the same random-percent function to determine whether the CPU would choose to defend or attack. Then, if function returned true, I
+                        calculated the dodge/critical-attack chance again to see whether the CPU pokemon can dodge your incoming attack.
+                    </li>
+                    <li>I felt like this gave the game some unpredictability and some variety between games. Some games the CPU might pull off a comeback by executing 
+                        a couple of defends in a row. This gives the player more incentive to choose defend. It also creates risk/reward for both attack and defend buttons.
+                    </li>
+                    <li>This was all handled under BattleControls.tsx</li>
+                </ul><br>
                 <div><p>Game (React: rendering components conditionally)</p></div>
                 <ul>
                     <li>When starting the game, I wanted the player to be locked into a gameState so they don't accidentally redraw another pokemon or click a button that doesn't
@@ -92,6 +110,7 @@
                     <li>To solve this problem and display to the user that the CPU is taking its turn, I added a "dot dot dot" CSS animation in the BattleLog to show the player
                         that the moves are being loaded and to give the player enough time to actually read the prompt below.
                     </li>
+                    <li>I also included some button and card animations to make the game feel more interactive.</li>
                 </ul><br>
                 <div><p>Game (React: What I want to do in the future)</p></div>
                 <ul>
@@ -102,6 +121,10 @@
                     </li>
                     <li>I would create the battle log to become a click through instead of a setTimeout() so that players can read and click through the prompts at their
                         own pace.
+                    </li>
+                    <li>I tried using a blank Pokemon card template as the background image and fit in all the attributes to that template. However, I was running into
+                        formatting issues and the card was very weird looking on certain browsers so I decided to scrap the idea for now and just create a clean look. If
+                        I had more time this would be a priority in trying to fix so it simulates a card game more.
                     </li>
                     <li>I want to get more into animations with React maybe using CSS or some other method. Just to add more artistic style to the game.</li>
                 </ul><br>
