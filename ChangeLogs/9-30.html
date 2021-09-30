@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../status.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    </head>
+    <body class="change-logs">
+        <div class="list">
+            <div>
+                <div class="underline-change-logs"><h1 class="h1-change-logs">Week of 9/30</h1></div>
+                <div><p>General Note</p></div>
+                <ul>
+                    <li>This week I focused heavily on creating my game using React. I primarily learned typescript and React.
+                        Here's the seperate repository for the game: <a class="underline" href="https://github.com/srinathv31/Pokemon-TB-Game"
+                        target="_blank">https://github.com/srinathv31/Pokemon-TB-Game</a>
+                    </li>
+                </ul><br>
+                <div><p>Game (React using Components to display visuals)</p></div>
+                <ul>
+                    <li>First, I had to move my game from html/css files to a React project. I did this by creating a CSS file for my React project and using bootstrap to recreate
+                        the layout I had in my html file.
+                    </li>
+                    <li>I used Javascript to create a Pokemon class to handle all of the attributes of a Pokemon. However, I had to find a way to translate this into typescript and
+                        React. I found that using an explicit class was a little confusing while working in a React app, so I turned my pokemon.js Class into a JSON file.
+                    </li>
+                    <li>With this JSON file, I created an interface to decribe the Pokemon attributes as if I was using a class in Javascript.</li>
+                    <li>One of the biggest things to get used to was breaking down the different aspects of my React app into: components and utilities.</li>
+                    <li>I created a data.ts file in my utilities to handle the "Random Draw" function in my React app. Before, I used a Javascript function to randomly select a 
+                        Pokemon out of an array and return all of the attributes in html to view it on the page. Now, I used a typescript function to randomly select an ID from my
+                        Pokemon.json file which emulates drawing a random pokemon from an array.
+                    </li>
+                    <li>I then created a Controls.tsx component that uses this typescript function to grab a random Pokemon and set it using useState for both the player and
+                        the CPU.
+                    </li>
+                    <li>I created a PokemonView.tsx component to display the selected Pokemon for each player on the screen.</li>
+                </ul><br>
+                <div><p>Game (React using setState Components)</p></div>
+                <ul>
+                    <li>After my visual setup was done, I started to work on the logic of the game.
+                    </li>
+                    <li>At first, I was only trying to implement an attack function which subtracts health from the opponent pokemon given your pokemon's attack attribute. However,
+                        I was having a really hard time on figuring this out and it took me 6 days + one day of lab to understand and solve this problem.
+                    </li>
+                    <li>I was having a difficult time understanding states and how to use setState to update variables throughout my React app.</li>
+                    <li>It finally clicked, when I realized I had to lift my "pokemon health" state up into the App.tsx so the entire React app can see when it updates.
+                        Essentially, giving it priority. (This may not be correct terminology but I hope this makes sense).
+                    </li>
+                    <li>Once I understood how setState worked, I then used "health" and "setHealth". I used "setHealth" to initialize the health at the beginning of the
+                        game and then used it in my attack function to constantly setHealth everytime the health changes. I then used "health" to display the newly affected health
+                        attribute in the battle logger at the bottom and on the Pokemon views.
+                    </li>
+                    <li>I wanted to make this game similar to a pokemon game and in a pokemon game, there is text that updates you throughout a battle. For example,
+                        'Charizard used attack' or 'Squirtle fainted' to keep the player updated in what is happening in a turn-based game.
+                    </li>
+                    <li>To create this I used a BattleLog.tsx component which has a list of text that activates based on what happens in game. I used the "gameState" useState to
+                        update the component on which prompt to display for each action. Throughout the program, I call "setGameState". For example, in Controls.tsx I setGameState
+                        to equal the prompt that shows which card the player just drew. Most of my setGameState are handled under BattleControls.tsx.
+                    </li>
+                    <li>I made BattleControls.tsx component to handle the "attack" and "defend" abilities of the game. I had to use setHealth to update the health while using 
+                        the attack button which subtracts the pokemon health from the other pokemon's attack.
+                    </li>
+                    <li>The "defend" ability is something that I added to create some strategy and flair to the game. When activated, the pokemon has a chance to dodge the opponent
+                        pokemon's attack and deliver a critical counter-attack which is the pokemon's attack + 10. I made it so that if a pokemon has a higher defense attribute, the
+                        higher chance they have to dodge and deliver a counter-attack.
+                    </li>
+                    <li>I created a getMissPercent() function in data.ts to generate a random number between the pokemon's defense attribute and 100 (thus a higher defense gives you 
+                        a higher chance for a bigger number). Then I pass this number and the pokemon's defense attribute through the getMissValue() function. If the newly generated
+                        number is equal to or less than the first number, then the function returns true in BattleControls.tsx and the pokemon successfully dodges the attack. False
+                        means the pokemon did not dodge the attack which means the pokemon will take damage minus their defense attribute.
+                    </li>
+                    <li>I wanted the player to see how much the percent chance was to dodge an attack, instead of having everything behind the scenes. So I had to create a 
+                        criticalState in the App.tsx to lift it and set the criticalState to whatever the function calculated it as and pass it through the BattleLog.tsx component
+                        to display it at the bottom of the screen.
+                    </li>
+                </ul><br>
+                <div><p>Game (React: rendering components conditionally)</p></div>
+                <ul>
+                    <li>When starting the game, I wanted the player to be locked into a gameState so they don't accidentally redraw another pokemon or click a button that doesn't
+                        relate to the game. This is where I learned how to conditionally render components in React.
+                    </li>
+                    <li>I created a visible and setVisible useState. I then created a button called "start game" which sets visible to true. If visible is set to true on buttonClick
+                        then the "draw card" and "play game" button dissapear and the "attack" and "defense" button appear to start the game.
+                    </li>
+                    <li>I used this same technique on the "how to play" button to display the directions of the game on the same page. However, I implemented another button called 
+                        "close" which sets helpVisible to true which makes the how to play text dissapear and the how-to-play button reappear. This is simply a UI style choice to
+                        make it look more like a real product. And to practice using setState to render components.
+                    </li>
+                </ul><br>
+                <div><p>Game (React: animation)</p></div>
+                <ul>
+                    <li>I implemented setTimeout() to create an artificial delay to emulate the CPU taking its turn. However, it just looked like the React app was frozen.
+                    </li>
+                    <li>To solve this problem and display to the user that the CPU is taking its turn, I added a "dot dot dot" CSS animation in the BattleLog to show the player
+                        that the moves are being loaded and to give the player enough time to actually read the prompt below.
+                    </li>
+                </ul><br>
+                <div><p>Game (React: What I want to do in the future)</p></div>
+                <ul>
+                    <li>If I had more time for this project these are things that I would want to do:
+                    </li>
+                    <li>I want to seperate the dodge and critical attack features so that there is a percent chance calculated for both so it doesn't seem overpowered to 
+                        use the defend button all the time.
+                    </li>
+                    <li>I would create the battle log to become a click through instead of a setTimeout() so that players can read and click through the prompts at their
+                        own pace.
+                    </li>
+                    <li>I want to get more into animations with React maybe using CSS or some other method. Just to add more artistic style to the game.</li>
+                </ul><br>
+                <div><p>Git (deploying page, git pull issues)</p></div>
+                <ul>
+                    <li>This week with git I learned how to deploy my React app and create a node.js workflow. This allowed me to simply link the React page to my
+                        portfolio page.
+                    </li>
+                    <li>I had an issue where my local files were not up to date with the git repo. I learned to use -stash to save the local changes and re-push them later
+                        after pulling the latest repo.
+                    </li>
+                </ul><br>
+            </div>
+        </div>
+    </body>
+</html>
+
