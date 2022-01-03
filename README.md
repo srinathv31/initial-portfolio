@@ -6,4 +6,4 @@ Here is a link to the portfolio website: https://srinathv31.github.io
 
 Here is a link to the repository with the Pokemon Game source code: https://github.com/srinathv31/Pokemon-TB-Game.git
 
-[![Srinath's GitHub stats](https://github-readme-stats.vercel.app/api?username=srinathv31&count_private=true&show_icons=true&theme=radical)](https://github.com/srinathv31/github-readme-stats)
+[![Srinath's GitHub stats](https://github-readme-stats.vercel.app/api?username=srinathv31&count_private=true&show_icons=true&theme=cobalt)](https://github.com/srinathv31/github-readme-stats)
