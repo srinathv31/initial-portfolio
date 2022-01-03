@@ -6,4 +6,4 @@ Here is a link to the portfolio website: https://srinathv31.github.io
 
 Here is a link to the repository with the Pokemon Game source code: https://github.com/srinathv31/Pokemon-TB-Game.git
 
-<img align="center" src="https://github-readme-stats.vercel.app/api/<CARD_TYPE>/srinathv31=<srinathv31>&theme=<THEME_NAME>" />
+<img align="center" src="https://github-readme-stats.vercel.app/api/<srinathv31>/?username=<srinathv31>&theme=<THEME_NAME>" />
