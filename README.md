@@ -8,4 +8,4 @@ Here is a link to the repository with the Pokemon Game source code: https://gith
 
 [![Srinath's GitHub stats](https://github-readme-stats.vercel.app/api?username=srinathv31&count_private=true&show_icons=true&theme=algolia)](https://github.com/srinathv31/github-readme-stats)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=srinathv31)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=srinathv31&hide=html)](https://github.com/anuraghazra/github-readme-stats)
